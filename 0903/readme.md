@@ -17,11 +17,11 @@
 + 웹 브라우저란 사용자가 인터넷을 통해 웹 페이지를 볼 수 있게 해주는 프로그램이다. 
 
 ## 웹 브라우저의 종류
-  -Microsoft Edge
-  -Opera
-  -Firefox
-  -chrome
-  -Safari
+  - Microsoft Edge
+  - Opera
+  - Firefox
+  - chrome
+  - Safari
 
 # 웹 페이지의 주소
 
@@ -29,12 +29,12 @@
 
 웹 페이지의 주소에 대해서 설명하기 위한 가상의 주소이다.
 
--https : 프로토콜 - http, https, file, ftp, telnet, mailto, news등
--www.example.com : 서버주소 - 우베 페이지를 가진 컴퓨터의 인터넷 주소, IP 주소
-:8080 : TCP/IP포트 번호 - 서버가 브라우저로부터 접속을 기다리는 TCP/IP포트 번호.
-/pata/ : 경로명 - 웹 서버 내 웹 페이지 파일의 폴더 경로
-index.html : 파일이름 - 웹 페이지의 HTML 파일 이름
-?page1234560&id=766 : 식별자
+- https : 프로토콜 - http, https, file, ftp, telnet, mailto, news등
+- www.example.com : 서버주소 - 우베 페이지를 가진 컴퓨터의 인터넷 주소, IP 주소
+- :8080 : TCP/IP포트 번호 - 서버가 브라우저로부터 접속을 기다리는 TCP/IP포트 번호.
+- /pata/ : 경로명 - 웹 서버 내 웹 페이지 파일의 폴더 경로
+- index.html : 파일이름 - 웹 페이지의 HTML 파일 이름
+- ㄴ?page1234560&id=766 : 식별자
 
 ## URI URL URN 구분하기
 ### URI(Uniform Resource Identifier) 통합 자원 식별자
