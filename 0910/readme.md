@@ -17,8 +17,12 @@
 
 # HTML 페이지 기본 구조
 ## HTML5 페이지의 필수 태그
-  - <!DOCTYPE html> -> HTML5 문서임을 알리는 지시어
-  - <html>, <heam>, <title>, ,<body> 태그가 있음.
+- <!DOCTYPE html> : HTML5 문서임을 알리는 지시어
+- <html> : HTML 문서의 루트(root) 요소
+- <head> : 문서의 메타데이터(metadata)를 포함
+- <title> : 문서의 제목을 정의 (브라우저 탭에 표시됨)
+- <body> : 실제로 브라우저에 보여지는 콘텐츠를 포함
+	
 ## html 태그 특징
 	- <start tag> contents </end tag>	<= elements. tree의 요소가 된다.
 	- 시작 태그 종료 태그 모두 있는 경우와 시작 태그만 있는 경우가 있다.
@@ -26,7 +30,9 @@
 	- 속성 값에 불필요한 공백 문자는 표준에 어긋난다.
 
 # title 속성으로 툴팁 달기
-` <h1 title="h1태그로 작성하였습니다.">
-	1장 홈페이지</h1>`
+```
+ <h1 title="h1태그로 작성하였습니다.">
+	1장 홈페이지</h1>
+```
  
   
