@@ -35,40 +35,47 @@
  <html>
  <head>
  <meta charset="utf-8">
- <title>문단 제목 달기</title>
- </head>
+ <title>툴팁 달기</title></head>
  <body>
- <h1>1장 홈페이지 만들기</h1>
- <h2>1절 HTML 언어</h2>
- <h3>1. 웹</h3>
- <h4>1.1 인터넷</h4>
- <h5>1.1.1 네트워크</h5>
- <h6>1.1.1.1. 통신</h6>
+ <h1 title="h1태그로 작성하였습니다.">
+ 1장 홈페이지</h1>
+ <h2 title="h2태그로 작성하였습니다.">
+ 1절 HTML 언어</h2>
  </body>
  </html>
 ```
-## HTML 텍스트/문서 구조 관련 태그 정리
-
-| 태그 | 이름 | 설명 |
-|------|------|------|
-| `<p>` | Paragraph (문단) | 텍스트 단락을 정의 |
-| `<br>` | Line Break (줄바꿈) | 줄바꿈. 닫는 태그 없음 |
-| `<hr>` | Horizontal Rule (수평선) | 내용 구분용 수평선 |
-| `<h1>` ~ `<h6>` | Heading (제목) | 제목 태그. 숫자가 클수록 글자가 작아짐 |
-| `<blockquote>` | Block Quote (인용문) | 긴 인용문 블록을 표시 |
-| `<pre>` | Preformatted Text | 줄바꿈, 공백, 들여쓰기를 그대로 표시 |
-| `<strong>` | Strong (강조) | 텍스트를 의미적으로 강하게 강조 (`<b>`보다 의미적) |
-| `<em>` | Emphasis (기울임 강조) | 텍스트를 의미적으로 강조 (`<i>`보다 의미적) |
-| `<b>` | Bold (굵게) | 시각적으로만 굵게 표시 |
-| `<i>` | Italic (기울임) | 시각적으로만 기울임 표시 |
-| `<span>` | Inline Container | 의미 없는 인라인 컨테이너, 스타일 적용용 |
-| `<div>` | Block Container | 구조적 구분을 위한 블록, 레이아웃용 |
-
----
-
-### 닫는 태그가 없는 태그
-- `<br>` : 줄바꿈
-- `<hr>` : 수평선  
-> 위 두 태그는 **빈 요소(empty elements)** 로, 닫는 태그가 필요 없습니다.
-
-  
+# <p>로 단락 나누기
+```
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>단락 나누기</title></head>
+ <body>
+ <h3>2 개의 단락 나누기</h3>
+ <p>
+ HTML 문서도 본문을여러단락으로
+나눌수있다. CSS 스타일을 사용하면
+단락단위로내어쓰기와들여쓰기가가능하다.</p>
+ <p>
+여러개의빈칸은하나로취급되며,
+엔터키역시하나의빈칸으로처리된다.</p>
+ </body>
+ </html>
+```
+# <hr> 태그로 수평선 긋기  
+```
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>수평선 긋기</title></head>
+ <body>
+ <h3>수평선 긋기</h3>
+ <hr>
+ <p>hr 태그는 horizontal에서 딴 글자입니다.</p>
+ <hr>
+ <p>종료 태그&lt;/hr&gt;를 사용하지 않습니다.</p>
+ </body>
+ </html>
+```
