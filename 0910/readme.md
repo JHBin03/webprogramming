@@ -79,3 +79,100 @@
  </body>
  </html>
 ```
+# <br>태그로 새로운 줄로 넘어가기
+```
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>새로운 줄 넘어가기</title>
+ </head>
+ <body>
+ <h3>새로운 줄 넘어가기</h3>
+ <hr>
+ &lt;br&gt; 태그로 다음 줄로 넘어갑니다.<br>
+ 2 개의 &lt;br&gt; 태그로 두 번 넘어 갑니다.<br><br>
+잘보이나요? 
+</body>
+ </html>
+```
+# 문자, 기호, 심볼 입력
+- 기호로 여백 표시한 것 - white characters(blank, tab, newline)
+  여러번의 탭 스페이스바 엔터를 써도 하나의 빈칸으로 표현됨.
+  여러 여백을 만들려면 &nbsp;를 사용. (한 번 쓸 때마다 빈칸 1개)
+- HTML5의 문자 : 유니코드 문자셋, UTF-8코드 체계
+# <pre>태그 - 개발자의 포맷 그대로 출력
+```
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>개발자의 포맷 그대로 출력</title></head>
+ <body>
+ <h3>개발자의 포맷그대로출력하기</h3>
+ <hr>
+ <p>
+ &lt;p&gt; 태그를 사용하면
+           여러 개의 빈 칸은 하나로, 
+            여러 줄은 한 줄에 붙여 출력됩니다.</p>
+ <hr>
+ <pre>
+그러나&lt;pre&gt; 태그를 사용하면
+            사용자가입력한
+            그대로출력됩니다.
+ </pre>
+ </body>
+ </html>
+```
+# 텍스트 꾸미기
+## HTML 텍스트 꾸미기 태그 정리
+| 태그 | 의미 / 이름 | 설명 |
+|------|--------------|------|
+| `<b>` | Bold (굵게) | 텍스트를 굵게 표시 (의미 없음, 시각적 효과만) |
+| `<strong>` | Strong Emphasis | 의미적으로 중요한 텍스트를 굵게 표시 |
+| `<i>` | Italic (기울임) | 텍스트를 기울여 표시 (의미 없음, 시각적 효과만) |
+| `<em>` | Emphasis | 의미적으로 강조된 텍스트를 기울여 표시 |
+| `<u>` | Underline (밑줄) | 텍스트에 밑줄을 긋습니다 |
+| `<mark>` | Highlight | 텍스트를 형광펜처럼 강조 (노란색 배경) |
+| `<small>` | Small Text | 텍스트를 작게 표시 |
+| `<sub>` | Subscript | 아래 첨자 텍스트 (예: H<sub>2</sub>O) |
+| `<sup>` | Superscript | 위 첨자 텍스트 (예: E = mc<sup>2</sup>) |
+| `<del>` | Deleted Text | 삭제된 텍스트처럼 취소선 표시 |
+| `<ins>` | Inserted Text | 추가된 텍스트처럼 밑줄로 표시 |
+# 블록 태그와 인라인 태그
+## 태그 : 블록 태그와 인라인 태그로 구분.
+## 블록 태그
+- 항상 새 라인에서 시작하여 출력
+- 양 옆에 다른 콘텐트를 배치하지 않고 한 라인 독점 사용
+- 가장 많이 사용되는 블록 태그 : <div>
+## 인라인 태그
+- 블록속에삽입되어블록의일부로출력
+- 가장많이사용된인라인태그: <span>
+
+## <div> 블록과<span> 인라인
+```
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>&lt;div&gt;블록과&lt;span&gt;인라인</title>
+ </head>
+ <body>
+ <h3>사랑</h3>
+ <hr>
+ <div style="background-color:skyblue; padding:20px;">
+내가사람의방언과천사의말을할지라도
+<span style="color:red">사랑</span>이없으면
+소리나는구리와울리는꽹과리가되고,
+ <span style="color:red">사랑</span>이없으면아무
+것도아니라.
+ </div>
+ <p>
+ ~우리서로사랑하며살아요~
+ </p>
+ </body>
+ </html>
+```
+## Block Element
+- HTML 요소 중에서 기본적으로 새로운 줄(라인)을 차지하며, 화면 전체 너비(부모 요소의 가로 공간)를 차지하는 요소
+- 자기 자신이 줄 바꿈을 만들고, 세로 방향으로 쌓인다(stack)**는 특징
