@@ -281,7 +281,7 @@
 - 오디오데이터: 재생시간, 채널수
 - 이미지데이터: 이미지의폭, 높이, 컬러해상도
 ## HTML 페이지에 대한 메타데이터를 담기 위한 태그들
-- `<base>`, `<link>`, `<script>`, `<style>`, `<title>`, `<meta>`
+- &lt;base&gt;, &lt;link&gt;, `<script>`, `<style>`, `<title>`, `<meta>`
 - 메타 태그들은 head 태그 안에 작성 해야한다.(script는 body 내에도 작성 가능)
 # 이미지 삽입
 ## &lt;img&gt; 태그의 src 속성에 이미지 파일의 주소지정
