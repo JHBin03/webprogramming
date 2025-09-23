@@ -89,3 +89,153 @@
 #### `<progress>`
 - 작업의 진행 정도 표시
 
+## html5에서 제거 된 태그
+- `<big>`, `<center>`, `<dir>`, `<font>`, `<tt>`, `<u>`, `<xmp>`, `<acronym>`, `<applet>`, `<basefont>`, `<frame>`, `<frameset>`, `<noframes>`, `<strike>`
+- 문서의 시맨틱 구조를 저해한다는 이유로 HTML5에서 제거되었다.
+
+## 웹 폼
+### 웹 폼
+- 웹 페이지에서 사용자 입력을 받는 폼
+- 로그인, 등록, 검색, 예약, 쇼핑 등
+### 폼 요소
+- 폼을 만드는 다양한 태그
+- `<input>`, `<textarea>`, `<select>` 등
+
+## 폼 작성
+### 폼태그`<form>` 태그로 둘러싸는 모양
+#### name 속성
+- 폼의 이름 지정
+#### action 속성
+- 폼 데이터를 처리할 웹 서버 응용프로그램의 이름
+- submit 버튼이 눌리면 브라우저는 action에 지정된 웹 서버 응용프로그램 실행 요청
+- 웹 서버 응용프로그램은 Java, JSP, PHP, C/C++ 등 다양한 언어로 작성
+#### method 속성
+- 폼 데이터를 웹 서버로 전송하는 형식
+- 대표적인 전송 방식 : GET, POST
+
+## `<form>`태그
+```
+<form action="웹 서버 응용 프로그램의 URL"
+      enctype="데이터의 인코딩 타입"
+      method="GET|PST"
+      name="폼 이름"
+      target="윈도우 이름">
+      . . . 여러개의 폼 요소 작성
+</form>
+```
+- action : 폼 데이터를 처리할 웹 서버 응용프로그램 이름 URL
+- entype : 폼 데이터를 웹 서버로 전송할 때 암호화 방식 지정
+- ethod : 폼 데이터를 웹 서버에 전송하는 방식
+- target : 웹 서버 응용프록램으로부터 전송받은 데이터를 출력할 윈도우 이름
+
+## 네이버 검색 사례로 폼 전송 과정 이해
+### 1. 네이버 사이트에 접속한다.
+```
+ <form name="sform"  action="https://search.naver.com/search.naver" method="get">
+ <input name="query" type="text">
+ <button type="submit">"검색"</button>
+ </form>
+```
+입력 창에 "Elvis" 입력, "검색" 버튼을 누르면, 브라우저는 `<form>` 태그의 action=“https://search.naver.com/search.naver”을 참고. search.naver.com 서버에 접속하여 search.naver 응용 프로그램의 실행을 요구해야 한다는 것 확인
+### 2. 입력창에‘Elvis’를 입력하고 검색버튼을 누르면 웹 서버 응용프로그램에 보낼 폼 데이터를 만든다. https://search.naver.com/search.naver?... query=Elvis ...
+### 3. 브라우저는 search.naver.com에 접속. search.naver실행 요청.query=Elvis를 전달한다.
+### 4. 웹 서버에서 search.naver응용 프로그램이 실행되고, 검색 결과를 브라우저에게 보낸다.
+### 5. 브라우저는 검색 결과를 화면에 출력한다.
+
+## 폼 요소의 종류
+| 폼 요소 | 설명 |
+|---|---|
+| `<input type="text">` | 한 줄 텍스트 입력 창 |
+| `<input type="password">` | 암호 입력을 위한 한 줄 텍스트 입력 창 |
+| `<input type="button">` | 단순 버튼 |
+| `<input type="submit">` | 웹 서버로 폼 데이터를 전송시키는 버튼 |
+| `<input type="reset">` | 입력된 폼 데이터를 초기화시키는 버튼 |
+| `<input type="image">` | 이미지 버튼 |
+| `<input type="checkbox|radio">` | 체크박스와 라디오버튼 |
+| `<select>` | 드롭다운 리스트를 가진 콤보박스 |
+| `<input type="month|week|date|time|datetime-local">` | 년, 월, 일, 시간 등의 시간 정보 입력 창 |
+| `<input type="number|range">` | 스핀 버튼과 슬라이더바로 편리한 숫자 입력 창 |
+| `<input type="color">` | 색 입력을 쉽게 하는 컬러 다이얼로그 |
+| `<input type="email|url|tel|search">` | 이메일, URL, 전화번호, 검색키워드 등 형식 검사 기능을 가진 텍스트 입력 창 |
+| `<input type="file">` | 로컬 컴퓨터의 파일을 선택하는 폼 요소 |
+| `<button type="button|reset|submit">` | 단순 버튼, reset, submit 버튼 |
+| `<textarea>` | 여러 줄의 텍스트 입력 창 |
+
+## 텍스트 입력
+### `<input type="text">`
+- 한 줄 짜리 입력 창
+### `<input type="password">`
+- 암호 입력 창
+### `<textarea>`
+- 여러 줄 입력 창
+
+## 데이터 목록을 가진 텍스트 입력 창, `<datalist>`
+### 목록 리스트를 작성하는 태그
+- `<option>` 태그로 항목 하나 표현
+### `<input type=“text”>`에 입력 가능한 데이터 목록 제고
+
+## 텍스트/ 이미지 버튼 만들기
+### `<input type=“button|reset|submit|image” value=“버튼의 문자열”>`
+### `<button type=“button|reset|submit”>`버튼의 문자열`</button>`
+
+## 선택형 입력 : 체크박스와 라디오버튼
+### `<input type="checkbox">`
+- 체크박스 만들기
+- 여러개 선택 가능
+### `<input type=“radio”>`
+- 라디오버튼 만들기
+- name 속성 값이 같은 라디오버튼들이 하나의 그룹 형성
+
+## 선택형 입력 : 콤보 박스
+### `<select>`
+- 드롭다운 리스트에 목록 출력, 목록을 선택하는 입력 방식 (<option> 태그로 항목 하나 표현)
+
+## `<label>`로 폼 요소의 캡션 만들기
+### 캡션과 폼을 한 단위로 묶을 때 쓴다.
+- 캡션 텍스트를 명료하게 하는 장점
+
+## 선택형 요소의 캡션을 `<label>`로 감싸기
+### 선택형 요소에 `<label>` 태그 사용
+- 캡션 텍스트나 이미지를 선택해도 폼 요소를 선택한 것으로 처리
+
+## html에서의 색 표현
+### 색 코드 - #rrggbb
+- 16진수로 표기
+### `<input type="color" value="#00ff00">`
+- 컬러 다이얼로그 출력, 사용자로부터 색 선택
+
+## 시간 정보 입력 폼 요소
+### `<input type="month|week|date|time|datetime-local">`
+- 시간 정보만 입력 가능한 폼 요소
+
+## 스핀버튼과 슬라이드 바로 편리한 숫자 
+### `<input type=“number”>`
+- 스핀버튼으로 정교한 값 입력
+```
+<input type="number" min="0.0" max="10.0" 
+step= "0.5">
+``` spin 버튼 클릭 시 0.0~ 10.0 사이에서 0.5씩 증감
+### `<input type=“range”>`
+- 슬라이드 바로 대략적인 값 입력
+```
+<input type="range" min="0" max="100" 
+list="temperatures">
+ <datalist id="temperatures">
+ <option value="10" label="Low">
+ <option value="50" label="Medium">
+ <option value="90" label="High">
+ </datalist>
+``` 슬라이드 바를 움직여 0 ~ 100 사이의 값 입력
+
+## 입력할 정보의 힌트 보여주기
+- placeholder 속성에 사용자가 입력할 데이터 힌트 주기
+```
+이메일주소: 
+<input type="email" placeholder="id@host">
+```
+
+## 형식을 가진 텍스트 입력
+### `<input type="email">`, email 주소 입력
+### `<input type="url">`, URL 입력
+### `<input type=“tel”>`, 전화번호 입력
+### 검색어입력, `<input type="search">`
