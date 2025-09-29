@@ -130,4 +130,54 @@ CSS3 스타일 시트, 셀럭터, 꾸미기, 박스 모델, 그림자 효과
 #### 태그의 종류에 관계없이 class 셀렉터 활용 가능
 
 ## 셀렉터 조합하기
-###
+### 2개 이상의 셀렉터 조합
+- 조합에 적합한 HTML 태그에만 적용
+### 자식셀렉터(child selector)
+- 부모 자식 관계인 두 셀렉터를 ‘>’ 기호로 조합
+### 자손셀렉터(descendent selector)
+- 자손 관계인 2개 이상의 태그 나열
+
+## 전체 셀렉터와 속성 셀렉터
+### 전체 셀렉터(universal selector)
+- 와일드 문자(*)를 사용하여 모든 태그에 적용시키는 셀렉터
+  예) * `{ color : green; }`
+### 속성 셀렉터
+- HTML 태그의특정속성(attribute)에 대해 값이 일치하는 태그에만 스타일을 적용하는 셀렉터
+ 예)  `input[type=text] { color : red; }`
+
+## 가상 클래스(pseudo-class) 셀렉터
+### 어떤 조건이나 상황에서 스타일을 적용하도록 만든 셀렉터
+	40개 이상의 많은 가상 클래스 셀렉터 있음
+
+# CSS3에서 색 표현
+## 3 가지 방법
+- 16진수 코드로 표현
+- 10진수 코드와 RGB()로 표현
+- 색 이름으로 표현
+	CSS3 표준에서는 140개 색의 이름을 정하고 있음
+```
+div { color : #8A2BE2; }
+div { color : rgb(138, 43, 226); }
+div { color : blueviolet; }
+```
+
+## 텍스트
+### 텍스트를 꾸미는 CSS3 스타일 시트
+```
+text-indent : <length>|<percentage>;
+text-align : left|right|center|justify;
+text-decoration : none|underline|overline|line-through;
+```
+CSS3의 표준 단위
+
+| 단위 | 의미 | 사용 예 |
+| :---: | :--- | :--- |
+| **em** | 배수 | `font-size: 3em;` /* 현재 폰트의 3배 크기 */ |
+| **%** | 퍼센트 | `font-size: 500%;` /* 현재 폰트의 500% 크기 */ |
+| **px** | 픽셀 수 | `font-size: 10px;` /* 10픽셀 크기 */ |
+| **cm** | 센티미터 | `margin-left: 5cm;` /* 왼쪽 여백 5cm */ |
+| **mm** | 밀리미터 | `margin-left: 10mm;` /* 왼쪽 여백 10mm */ |
+| **in** | 인치, $1\text{in} = 2.54\text{cm} = 96\text{px}$ | `margin-left: 2in;` /* 왼쪽 여백 2인치 */ |
+| **pt** | 포인트, $1\text{pt} = 1\text{in}$의 $1/72$ 크기 | `margin-left: 20pt;` /* 왼쪽 여백 20포인트 */ |
+| **pc** | 피카소(picas), $1\text{pc} = 12\text{pt}$ | `font-size: 1pc;` /* 1pc 크기의 폰트 */ |
+| **deg** | 각도 | `transform: rotate(20deg);` /* 시계 방향으로 20도 회전 */ |
