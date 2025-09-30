@@ -1,0 +1,12 @@
+
+
+p {
+    color: Brown;
+    font-family: 'Lucida Console', monospace;
+    font-size: 10px;
+    background-color: rgb(185, 209, 255);
+}
+
+p span {
+    font-size: 1.5em;
+}

@@ -1,0 +1,25 @@
+.main {
+    background-color: #E0FFFF;
+}
+
+.headline {
+    color: red;
+}
+
+.help {
+    color: rgb(62, 65, 218);
+    padding: 5px;
+    width: 200px;
+}
+
+p.help {
+    color: rgb(255, 0, 0);
+    font-size: 2em;
+}
+
+
+#hot {
+    background-color: rgb(255, 115, 0);
+    padding: 5px;
+    margin-top: 10px;
+}

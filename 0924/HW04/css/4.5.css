@@ -1,0 +1,30 @@
+.main {
+    background-color: #1bbe5f;
+}
+
+h3 {
+    color: green;
+}
+
+
+#center {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+strong {
+    color: purple;
+    background-color: yellow;
+}
+
+em {
+    color: green;
+    font-style: italic;
+}
+
+.indent p strong {
+    color: red;
+    background-color: transparent;
+}

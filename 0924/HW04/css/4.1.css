@@ -1,0 +1,16 @@
+body {
+    background-color: antiquewhite;
+}
+
+p {
+    color: purple;
+}
+
+h3 {
+    color: blue;
+}
+
+span {
+  font-size: 1em;
+  background-color: cornflowerblue;
+}
