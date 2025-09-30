@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3개의 div 활용 (1)</title>
+    <style>
+        /* 3개의 div를 감싸는 컨테이너 */
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center; /* div들을 중앙 정렬하기 위해 사용 */
+        }
+        
+        /* 3개의 div 공통 스타일 */
+        .box {
+            width: 200px; /* 너비 고정 */
+            height: 100px; /* 높이 고정 */
+            padding: 10px;
+            border: 3px solid rgb(21, 255, 0);
+            margin: 5px;
+            /* 핵심: div를 블록 속성은 유지한 채 인라인처럼 가로로 배치 */
+            display: inline-block; 
+            box-sizing: border-box; /* padding과 border가 width에 포함되도록 설정 */
+            vertical-align: top; /* 수직 정렬 조정 */
+            text-align: left; /* 텍스트는 왼쪽 정렬로 되돌림 */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>3개의 div 활용</h1>
+        <hr>
+        <div id="box1" class="box">
+            캔버스에 이미지를 그리기 위해서는 이미지를 담을 객체가 먼저 필요하다.
+        </div>
+        <div id="box2" class="box">
+            Image 객체의 src 프로퍼티를 이용하여 비트맵을 로드한다.
+        </div>
+        <div id="box3" class="box">
+            이미지 로딩이 끝나면 그때 비로소 이미지가 제대로 그려진다.
+            <br><br>
+            <div style="font-size: 0.8em; color: darkred;"></div>
+        </div>
+    </div>
+</body>
+</html>

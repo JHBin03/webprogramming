@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>오디오 재생 리스트</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 350px;
+      font-family: sans-serif;
+    }
+
+    td {
+      border: 1px solid #999;
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 4px 10px;
+      background-color: white;
+      color: black;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+
+    /* 오직 중지 버튼에만 hover 스타일 적용 */
+    button.stop:hover {
+      background-color: magenta;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h3>오디오 재생 리스트</h3>
+  <table>
+    <tr>
+      <td>1 애국가</td>
+      <td><button class="play">재생</button></td>
+      <td><button class="stop">중지</button></td>
+    </tr>
+    <tr>
+      <td>2 Moon Glow</td>
+      <td><button class="play">재생</button></td>
+      <td><button class="stop">중지</button></td>
+    </tr>
+    <tr>
+      <td>3 Embraceable You</td>
+      <td><button class="play">재생</button></td>
+      <td><button class="stop">중지</button></td>
+    </tr>
+  </table>
+</body>
+</html>
