@@ -6,13 +6,9 @@
     <title>안녕하세요</title>
 </head>
 <body>
-    <form>
-        <span id="greetingMessage">안녕하세요</span>
-    </form>
     <script>
        name = prompt("이름을 입력하세요.","홍길동");
-       outputElement = document.getElementById('greetingMessage');
-       outputElement.textContent = name + "님 안녕하세요";
+       document.write(name + "님 안녕하세요");
     </script>
     
 </body>
