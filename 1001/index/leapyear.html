@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>윤년 판별기</title>
+</head>
+<body>
+    <h1>윤년 판별 프로그램</h1>
+
+    <form action="">
+        <p>
+            입력 년도: <span id="yearInputDisplay"></span><br>
+            판별 결과: <strong id="resultOutput">결과를 기다리는 중...</strong>
+        </p>
+    </form>
+
+    <script>
+        // 1. 사용자에게 년도를 입력받고 정수형으로 변환합니다.
+        const inputYear = prompt("판별하고 싶은 년도를 입력하세요:", new Date().getFullYear());
+        const year = parseInt(inputYear);
+
+        // 2. 결과를 출력할 DOM 요소를 가져옵니다.
+        const yearDisplay = document.getElementById('yearInputDisplay');
+        const resultOutput = document.getElementById('resultOutput');
+
+        // 3. 유효성 검사 및 결과 처리
+        if (isNaN(year) || year === null) {
+            // 입력이 유효하지 않을 경우
+            yearDisplay.textContent = "입력 오류";
+            resultOutput.textContent = "❌ 유효한 년도를 입력해 주세요.";
+        } else {
+            // 입력된 년도를 폼에 먼저 표시합니다.
+            yearDisplay.textContent = year;
+
+            // 4. 윤년 판별 조건식을 정의합니다.
+            // (4의 배수이고 100의 배수가 아님) OR (400의 배수)
+            
+            // === 대신 == (동등 비교 연산자) 사용
+const isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+            // 5. 결과 메시지를 설정하고 폼에 출력합니다.
+            if (isLeapYear) {
+                resultOutput.textContent = "⭐ 윤년(Leap Year)입니다.";
+            } else {
+                resultOutput.textContent = "✅ 평년(Common Year)입니다.";
+            }
+        }
+    </script>
+</body>
+</html>
