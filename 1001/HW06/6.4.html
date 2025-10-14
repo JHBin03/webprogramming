@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>월화수목금토일</title>
+</head>
+<body>
+    <h2>월화수목금토일</h2>
+    <hr>
+<script>
+let day = prompt("월화수목금토일 중에서 입력하세요");
+
+// 결과를 저장할 변수
+let result;
+
+if (day === '월' || day === '화' || day === '수' || day === '목') {
+    result = "는 출근";
+} 
+else if (day === '일'||'토' || '금') {
+    result = "은 휴일";
+} 
+
+else {
+    result = "은/는 유효하지 않은 입력입니다.";
+}
+
+document.write(day + result);
+</script>
+
+</body>
+</html>

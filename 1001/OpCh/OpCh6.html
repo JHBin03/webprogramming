@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>별 문자 출력</title>
+</head>
+<body>
+    <h1>별 문자 출력하기</h1>
+    <hr>
+    <script>
+        function printStar() {
+            const userInput = prompt("정수를 입력하세요.");
+            const num = parseInt(userInput);
+
+            if (userInput === null || userInput.trim() === "" || isNaN(num) || num <= 0) {
+                document.write("입력 오류입니다.");
+                return;
+            }
+
+            let stars = "";
+            for (let i = 0; i < num; i++) {
+                stars += "*";
+            }
+            
+            document.write(stars);
+        }
+
+        printStar();
+    </script>
+</body>
+</html>

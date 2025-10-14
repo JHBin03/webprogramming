@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>document.write()</title>
+</head>
+<body>
+    <h2>document.write()로 표 만들기</h2>
+    <hr>
+
+<script>
+document.write("<table border='1'>");
+
+// 첫 번째 행 (헤더)
+document.write("<tr><th>n</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr>");
+
+// 두 번째 행 (제곱 값)
+document.write("<tr><th>n<sup>2</sup></th>");
+for (let i = 0; i <= 8; i++) {
+    document.write("<td>" + (i * i) + "</td>");
+}
+document.write("</tr>");
+
+// 표의 끝
+document.write("</table>");
+</script>
+
+</body>
+</html>
