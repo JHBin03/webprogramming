@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Open Challenge 09 - 마우스 클릭 연습</title>
+<style>
+  table { border-collapse: collapse; margin: 20px; }
+  td {
+    width: 50px; height: 50px;
+    border: 1px solid gray;
+    text-align: center;
+  }
+</style>
+<script>
+  let currentCell = null;
+
+  function randomCell() {
+    return Math.floor(Math.random() * 100);
+  }
+
+  window.onload = function() {
+    let table = document.getElementById("grid");
+    let cells = table.getElementsByTagName("td");
+    let i = randomCell();
+    cells[i].innerHTML = "<img src='donkey.png' width='40'>";
+    currentCell = i;
+
+    for (let j = 0; j < cells.length; j++) {
+      cells[j].onclick = function() {
+        cells[currentCell].innerHTML = "";
+        this.innerHTML = "<img src='donkey.png' width='40'>";
+        currentCell = j;
+      };
+    }
+  };
+</script>
+</head>
+<body>
+  <h3>마우스 클릭 연습</h3>
+  <hr>
+  <p>표 안의 셀을 클릭하면 당나귀 이미지가 이동합니다.</p>
+  <table id="grid">
+    <script>
+      for (let i = 0; i < 10; i++) {
+        document.write("<tr>");
+        for (let j = 0; j < 10; j++)
+          document.write("<td></td>");
+        document.write("</tr>");
+      }
+    </script>
+  </table>
+</body>
+</html>

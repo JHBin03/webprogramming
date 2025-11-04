@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>z-index 스타일 프로퍼티</title>
+<style>
+div { position: absolute; }
+img { position: absolute; }
+</style>
+</head>
+<body>
+<h3>z-index 스타일 프로퍼티</h3>
+<hr>
+<div>
+    <img src="media/spade-a.jpg" width="200" height="240" onclick="removeCard(this)">
+    <img src="media/spade-K.jpg" width="200" height="240" onclick="removeCard(this)">
+    <img src="media/spade-Q.jpg" width="200" height="240" onclick="removeCard(this)">
+    <img src="media/spade-J.jpg" width="200" height="240" onclick="removeCard(this)">
+</div>
+
+<script>
+function removeCard(obj){
+    obj.style.display = "none";
+}
+</script>
+
+</body>
+</html>

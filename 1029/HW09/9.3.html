@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>계산식 만들기</title>
+<script>
+function calc(e) {
+  if (e.key === "Enter") {
+    try {
+      document.getElementById("result").value = eval(document.getElementById("expr").value);
+    } catch {
+      alert("올바른 식을 입력하세요!");
+    }
+  }
+}
+</script>
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+  <p>수식을 입력하고 &lt;Enter &gt;를 입력하세요.</p>
+  식<input type="text" id="expr" onkeydown="calc(event)"> <br>
+  값<input type="text" id="result" readonly>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>라면을 끓이는 순서</title>
+</head>
+<body>
+<h3>라면을 끓이는 순서</h3>
+<hr>
+
+<ol type="A" style="background-color:yellowgreen" onclick="addStep()">
+    <li>물을 끓인다.</li>
+</ol>
+
+<script>
+function addStep(){
+    let text = prompt("문장을 입력하세요", "");
+    if(text != null && text != ""){
+        let li = document.createElement("li");
+        li.innerHTML = text;
+        document.getElementsByTagName("ol")[0].appendChild(li);
+    }
+}
+</script>
+
+</body>
+</html>

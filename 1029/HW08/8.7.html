@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>transform 회전</title>
+</head>
+<body>
+<h3>클릭하면 90도 회전합니다.</h3>
+<hr>
+<img src="media/spongebob.jpg" width="200" onclick="rotateSponge()" id="sp">
+
+<script>
+let angle = 0;
+
+function rotateSponge(){
+    angle += 90;
+    document.getElementById("sp").style.transform = "rotate(" + angle + "deg)";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>갬블링 게임</title>
+<style>
+  body {
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    background-color: white;
+    margin-top: 50px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  #game {
+    display: inline-block;
+    border: 2px solid #ccc;
+    padding: 30px 50px;
+    background-color: #d1a3a3;
+  }
+
+  .num {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    color: navy;
+    margin: 0 8px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: purple;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <h3>갬블링 게임</h3>
+  <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다.<br>모두 같은 수가 나오면 승리합니다.</p>
+  <hr>
+  <div id="game">
+    <div id="num1" class="num">0</div>
+    <div id="num2" class="num">0</div>
+    <div id="num3" class="num">0</div>
+    <div id="result"></div>
+  </div>
+
+<script>
+  const n1 = document.getElementById("num1");
+  const n2 = document.getElementById("num2");
+  const n3 = document.getElementById("num3");
+  const result = document.getElementById("result");
+
+  let values = [0, 0, 0];
+  let clicked = [false, false, false];
+  let finished = false;
+
+  function rand() {
+    return Math.floor(Math.random() * 3);
+  }
+
+  function updateAll() {
+    n1.textContent = values[0];
+    n2.textContent = values[1];
+    n3.textContent = values[2];
+  }
+
+  function check() {
+    if (clicked.every(v => v)) {
+      finished = true;
+      if (values[0] === values[1] && values[1] === values[2]) {
+        result.textContent = "Success(Click here to do again)";
+      } else {
+        result.textContent = "fail(Click here to do again)";
+      }
+    }
+  }
+
+  function reset() {
+    values = [0, 0, 0];
+    clicked = [false, false, false];
+    finished = false;
+    result.textContent = "";
+    updateAll();
+  }
+
+  [n1, n2, n3].forEach((el, idx) => {
+    el.addEventListener("click", () => {
+      if (finished) {
+        reset();
+        return;
+      }
+      if (clicked[idx]) return;
+      values[idx] = rand();
+      clicked[idx] = true;
+      updateAll();
+      check();
+    });
+  });
+
+  result.addEventListener("click", reset);
+</script>
+</body>
+</html>

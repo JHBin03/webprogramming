@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이미지 커서 만들기</title>
+<style>
+#cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+</style>
+<script>
+window.onmousemove = function(e) {
+  let img = document.getElementById("cursor");
+  img.style.left = e.pageX + "px";
+  img.style.top = e.pageY + "px";
+}
+</script>
+</head>
+<body>
+  <h3>마우스를 움직이면 이미지가 따라다닙니다.</h3>
+  <img id="cursor" src="Image/cursor.png" alt="커서">
+</body>
+</html>

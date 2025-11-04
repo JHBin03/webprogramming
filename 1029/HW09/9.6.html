@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이미지 확대/축소</title>
+<script>
+let scale = 1;
+window.onwheel = function(e) {
+  const img = document.getElementById("flower");
+  if (e.deltaY < 0) scale *= 1.05;
+  else scale *= 0.95;
+  img.style.transform = `scale(${scale})`;
+};
+</script>
+</head>
+<body>
+  <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+  <hr>
+  <p>이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.</p>
+  <img id="flower" src="Image/flower.jpg" width="300">
+</body>
+</html>

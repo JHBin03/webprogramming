@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>계산기 만들기</title>
+<style>
+  body { font-family: "맑은 고딕", sans-serif; }
+  table { border-collapse: collapse; margin-top: 10px; }
+  td { padding: 3px; }
+  input[type=button] {
+    width: 60px;   /* 폭 넓힘 */
+    height: 45px;  /* 높이 살짝 키움 */
+    font-size: 1em;
+    margin: 2px;   /* 버튼 사이 간격 추가 */
+  }
+  input[type=text] {
+    width: 250px;  /* 상단 입력창도 약간 더 넓게 */
+    height: 35px;
+    font-size: 1.1em;
+    text-align: right;
+  }
+
+</style>
+<script>
+function addChar(ch) {
+  let display = document.getElementById("display");
+  if (display.value === "0") display.value = ch;
+  else display.value += ch;
+}
+function calc() {
+  let display = document.getElementById("display");
+  try {
+    display.value = eval(display.value);
+  } catch {
+    alert("올바른 수식을 입력하세요!");
+  }
+}
+function clearDisplay() {
+  document.getElementById("display").value = "0";
+}
+function backspace() {
+  let display = document.getElementById("display");
+  let exp = display.value;
+  display.value = exp.length > 1 ? exp.slice(0, -1) : "0";
+}
+function none() {
+  // 아무 기능 없음
+}
+</script>
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <input type="text" id="display" value="0" readonly><br>
+  <table>
+    <tr>
+      <td><input type="button" value="BACK" onclick="backspace()"></td>
+      <td><input type="button" value="CE" onclick="clearDisplay()"></td>
+      <td><input type="button" value="C" onclick="clearDisplay()"></td>
+      <td><input type="button" value="=" onclick="calc()"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" onclick="addChar('7')"></td>
+      <td><input type="button" value="8" onclick="addChar('8')"></td>
+      <td><input type="button" value="9" onclick="addChar('9')"></td>
+      <td><input type="button" value="/" onclick="addChar('/')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" onclick="addChar('4')"></td>
+      <td><input type="button" value="5" onclick="addChar('5')"></td>
+      <td><input type="button" value="6" onclick="addChar('6')"></td>
+      <td><input type="button" value="*" onclick="addChar('*')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" onclick="addChar('1')"></td>
+      <td><input type="button" value="2" onclick="addChar('2')"></td>
+      <td><input type="button" value="3" onclick="addChar('3')"></td>
+      <td><input type="button" value="-" onclick="addChar('-')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="0" onclick="addChar('0')"></td>
+      <td><input type="button" value="." onclick="addChar('.')"></td>
+      <td><input type="button" value="NONE" onclick="none()"></td>
+      <td><input type="button" value="+" onclick="addChar('+')"></td>
+    </tr>
+  </table>
+</body>
+</html>

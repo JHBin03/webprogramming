@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>transform scale</title>
+</head>
+<body>
+<h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+<hr>
+
+<img id="sp" src="media/spongebob.jpg" width="200" onclick="scaleUp()">
+
+<script>
+let s = 1;
+
+function scaleUp(){
+    s++;
+    if(s > 4) s = 1;
+
+    document.getElementById("sp").style.transform =
+        "scale(" + s + ",1)";
+}
+</script>
+
+</body>
+</html>

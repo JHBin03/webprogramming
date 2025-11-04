@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>아이템 마우스 오버 시 설명</title>
+<style>
+#desc {
+  position: absolute;
+  background: lightyellow;
+  border: 1px solid gray;
+  padding: 4px;
+  visibility: hidden;
+}
+</style>
+<script>
+window.onload = function() {
+  let items = document.getElementsByTagName("li");
+  let desc = document.getElementById("desc");
+
+  for (let i = 0; i < items.length; i++) {
+    items[i].onmouseover = function(e) {
+      desc.innerHTML = this.dataset.desc;
+      desc.style.left = e.pageX + "px";
+      desc.style.top = e.pageY + "px";
+      desc.style.visibility = "visible";
+    };
+    items[i].onmouseout = function() {
+      desc.style.visibility = "hidden";
+    };
+  }
+};
+</script>
+</head>
+<body>
+  <h3>아이템에 마우스를 올리면 설명 출력</h3>
+  <hr>
+  <ul>
+    <li data-desc="빨간자전거를 타고 서울, 대전, 대구, 부산 찍고 목포, 인천을 거쳐 달린다.">자전거로 대한민국 일주</li>
+    <li data-desc="100m 전력 질주!">책 100권 읽기</li>
+    <li data-desc="수영 준비 및 연습">철인 3종 경기 준비</li>
+    <li data-desc="자바스크립트 마스터 되기">자바스크립트 정복</li>
+  </ul>
+  <div id="desc"></div>
+</body>
+</html>
