@@ -412,6 +412,43 @@ body {
     font-size: 1.25rem;
 }
 
+/* 연락하기 메시지 + QR */
+
+.contact-message {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* QR 전체 레이아웃 센터 정렬 */
+.qr-wrapper {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* 중앙 정렬 */
+    justify-content: center;
+}
+
+/* QR 이미지 크게 + 카드 디자인 유지 */
+.qr-image {
+    width: 200px;      /* 150px → 200px */
+    height: 200px;
+    object-fit: contain;
+    border-radius: 18px;
+    border: 1px solid rgba(227, 207, 186, 0.7);
+    background: #fffaf4;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* '사이트 QR' 텍스트 */
+.qr-label {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+
+
 
 .contact-value {
     font-size: 0.85rem;
